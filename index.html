@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Portfolio</title>
+    <link rel="stylesheet" href="static/css/style.css">
+</head>
+<body id = "top">
+    <header>
+        <div class="container">
+            <nav>
+                <ul>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#portfolio">Portfolio</a></li>
+                    <li><a href="#services">Expertise</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <div id="hero">
+        <div class="parallax"></div>
+        <div class="container">
+            <h1>I'm DEMI</h1>
+            <p>Software Developer | Data Analyst</p>
+            <a href="#portfolio" class="btn">Portfolio</a>
+        </div>
+    </div>
+    <section id="about">
+        <div class="container">
+            <h2>About Me</h2>
+            <p>A dedicated software developer and Data analyst crafting digital solutions with a creative touch.</p>
+        </div>
+    </section>
+    <section id="portfolio">
+        <div class="container">
+            <h2>Portfolio</h2>
+            <div class="portfolio-items">
+                <div class="portfolio-item">
+                    <a href="https://todolist-by-demi.vercel.app/" target="_blank">
+                        <img src="static/images/notes-girl.jpeg" alt="Portfolio Item 1">
+                    </a>
+                        <h3>To-Do List manager</h3>
+                        <p>Developed a web-based Todo List app using Django, cloud PostgreSQL for database, and deployed on Vercel for seamless access.</p>
+                </div>
+                <div class="portfolio-item">
+                    <a href="https://github.com/th-demi/Top-Spotify-songs-by-artist" target="_blank">
+                        <img src="static/images/Spotify-logo.png" alt="Portfolio Item 2">
+                    </a>
+                        <h3>Artists' trend analysis</h3>
+                        <p>Merged Spotify artists' data from their API with MusicBrainz country data using pandas and visualized top artists by country in a Tableau dashboard.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="services">
+        <div class="container">
+            <h2>Skills and Tools</h2>
+            <div class="skills-list">
+                <div class="skill-category">
+                    <h3>Web Development</h3>
+                    <ul>
+                        <li>Django</li>
+                        <li>HTML</li>
+                        <li>CSS</li>
+                        <li>PostgreSQL</li>
+                        <li>Bootstrap</li>
+                        <li>Vercel</li>
+                        <li>Git</li>
+                    </ul>
+                </div>
+                <div class="skill-category">
+                    <h3>Data Analysis</h3>
+                    <ul>
+                        <li>Python</li>
+                        <li>SQL, Data modelling, ETL</li>
+                        <li>Excel</li>
+                        <li>Tableau</li>
+                        <li>Pandas, Matplotlib</li>
+                        <li>Web scraping, API extraction</li>
+                        <li>Selenium automation</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="contact">
+        <div class="container">
+            <h2>Contact Me</h2>
+            <div class="contact-icons">
+                <a href="https://www.linkedin.com/in/th-demi/" target="_blank"><img src="static/images/icons/linkedin-icon.png" alt="LinkedIn"></a>
+                <a href="https://github.com/th-demi/" target="_blank"><img src="static/images/icons/github-icon.png" alt="GitHub"></a>
+                <a href="mailto:mariademetrius6@gmail.com"><img src="static/images/icons/mail-icon.png" alt="Mail"></a>
+            </div>
+        </div>
+    </section>
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Demi. All rights reserved.</p>
+        </div>
+    </footer>
+    <script>
+        window.addEventListener('scroll', function() {
+            var scrollPosition = window.scrollY;
+            document.querySelector('.parallax').style.transform = 'translateY(' + (scrollPosition * 0.5) + 'px)';
+        });
+        window.onload = function() {
+            window.location.hash = "top";
+        }
+    </script>
+</body>
+</html>
