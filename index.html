@@ -1,100 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Demi's Portfolio</title>
-    <link rel="stylesheet" href="static/css/style.css">
-</head>
-<body id = "top">
-    <header>
-        <div class="container">
-            <nav>
-                <ul>
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#portfolio">Portfolio</a></li>
-                    <li><a href="#services">Expertise</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                </ul>
-            </nav>
-        </div>
-    </header>
-    <div id="hero">
-        <div class="parallax"></div>
-        <div class="container">
-            <h1>I'm DEMI</h1>
-            <p>Software Developer | Python Developer</p>
-            <a href="#portfolio" class="btn">Portfolio</a>
-        </div>
-    </div>
-    <section id="about">
-        <div class="container">
-            <h2>About Me</h2>
-            <p>A dedicated software developer crafting digital solutions with a creative touch.</p>
-        </div>
-    </section>
-    <section id="portfolio">
-        <div class="container">
-            <h2>Portfolio</h2>
-            <div class="portfolio-items">
-                <div class="portfolio-item">
-                    <a href="https://demi-roomify.vercel.app/" target="_blank">
-                        <img src="static/images/Roomify.png" alt="Portfolio Item 1">
-                    </a>
-                    <h3>Roomify</h3>
-                    <p>Developed Roomify using <span class="sketch-highlight">Django</span> and <span class="sketch-highlight">React</span>, integrating <span class="sketch-highlight">Spotify API</span> for collaborative music playback with host control and guest voting.</p>
-                </div>
-                <div class="portfolio-item">
-                    <a href="https://todolist-by-demi.vercel.app/" target="_blank">
-                        <img src="static/images/notes-girl.png" alt="Portfolio Item 2">
-                    </a>
-                    <h3>To-Do List manager</h3>
-                    <p>Developed a web-based Todo List app using <span class="sketch-highlight">Django</span>, cloud <span class="sketch-highlight">PostgreSQL</span> for database, and deployed on <span class="sketch-highlight">Vercel</span> for seamless access.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-    <section id="services">
-        <div class="container">
-            <h2>Skills and Tools</h2>
-            <div class="skills-list">
-                <div class="skill-category">
-                    <ul>
-                        <li>Django</li>
-                        <li>React</li>
-                        <li>Javascript</li>
-                        <li>HTML, CSS</li>
-                        <li>PostgreSQL, ORM</li>
-                        <li>Vercel</li>
-                        <li>Git</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </section>
-    <section id="contact">
-        <div class="container">
-            <h2>Contact Me</h2>
-            <div class="contact-icons">
-                <a href="https://www.linkedin.com/in/th-demi/" target="_blank"><img src="static/images/icons/linkedin-icon.png" alt="LinkedIn"></a>
-                <a href="https://github.com/th-demi/" target="_blank"><img src="static/images/icons/github-icon.png" alt="GitHub"></a>
-                <a href="mailto:mariademetrius6@gmail.com"><img src="static/images/icons/mail-icon.png" alt="Mail"></a>
-            </div>
-        </div>
-    </section>
-    <footer>
-        <div class="container">
-            <p>&copy; 2024 Demi. All rights reserved.</p>
-        </div>
-    </footer>
-    <script>
-        window.addEventListener('scroll', function() {
-            var scrollPosition = window.scrollY;
-            document.querySelector('.parallax').style.transform = 'translateY(' + (scrollPosition * 0.5) + 'px)';
-        });
-        window.onload = function() {
-            window.location.hash = "top";
-        }
-    </script>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.ico" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@100..700&family=Rubik:wght@800&display=swap"
+      rel="stylesheet" />
+    <title>Demi Portfolio</title>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
 </html>

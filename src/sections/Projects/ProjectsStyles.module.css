@@ -1,0 +1,21 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+.projectsContainer {
+  display: flex;
+  flex-direction: column; /* Default to column for smaller screens */
+  align-items: center; 
+  gap: 40px; /* Increase gap between cards */
+}
+
+@media (min-width: 800px) {
+  .projectsContainer {
+    flex-direction: row; /* Change to row for larger screens */
+    flex-wrap: wrap;
+    justify-content: center; /* Center items */
+    padding: 0 30px; /* Add horizontal padding */
+  }
+}

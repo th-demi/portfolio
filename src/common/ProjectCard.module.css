@@ -1,0 +1,36 @@
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  width: 90%; /* Use a percentage for responsiveness */
+  max-width: 300px; /* Set a maximum width */
+  margin: 20px; /* Adjusted space between cards */
+  padding: 20px; /* Inner padding */
+  background-color: var(--project-card-bg);
+  border-radius: 20px;
+  text-decoration: none; /* Remove underline */
+}
+
+.imageContainer {
+  overflow: visible; /* Change to visible to prevent cutting off edges */
+  position: relative; /* Required for scaling effect */
+}
+
+.projectImage {
+  max-width: 100%; /* Adjusted to take full width */
+  height: auto;
+  border-radius: 20px;
+  transition: transform 200ms ease-in-out; /* Smooth transition */
+}
+
+/* Only scale the image on hover */
+.imageContainer:hover .projectImage {
+  transform: scale(1.05); /* Enlarge image on hover */
+}
+
+.projectTitle,
+.projectDescription {
+  margin: 10px 0; /* Space between title/description */
+  color: #222; /* Adjust color if necessary */
+}

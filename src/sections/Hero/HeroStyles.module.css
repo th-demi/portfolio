@@ -1,0 +1,131 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 40px; /* Increased gap for better spacing */
+  text-align: center;
+  height: 100dvh;
+  min-height: 500px;
+}
+
+.hero {
+  max-width: 200px;
+}
+
+/* Icon container styles */
+.iconContainer {
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+  margin: 20px 0;
+  align-items: flex-end;
+}
+
+/* Icon styles */
+.icon {
+  width: 35px;
+  height: 35px;
+  transition: transform 200ms ease-in-out;
+}
+
+/* Hover effect for icons */
+.icon:hover {
+  transform: scale(1.2);
+}
+
+/* Color mode toggle styles */
+.colorModeContainer {
+  position: relative;
+  display: flex; /* Make it a flex container */
+  justify-content: center; /* Center items horizontally */
+}
+
+.colorMode {
+  position: absolute;
+  right: 10px; /* Adjust as necessary for mobile */
+  top: 10px; /* Adjust as necessary for mobile */
+  width: 25px;
+}
+
+.colorMode:hover {
+  cursor: pointer;
+}
+
+
+/* Description styles */
+.description {
+  max-width: 24ch;
+  width: 100%;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+/* Button styles */
+.resumeButton {
+  border: none;
+  border-radius: 20px;
+  width: 120px;
+  height: 45px;
+  font-size: 18px;
+  font-weight: bold;
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+  transition: box-shadow 200ms ease-in-out, transform 200ms ease-in-out, background-color 200ms ease-in-out, color 200ms ease-in-out;
+  margin-top: 40px; /* Maintain some margin */
+}
+
+.lightButton {
+  background-color: black;
+  color: white;
+}
+
+.darkButton {
+  background-color: white;
+  color: black;
+}
+
+.resumeButton:hover {
+  transform: scale(1.05);
+}
+
+.resumeButton:active {
+  transform: translateY(2px);
+  box-shadow: 0 2px 2px rgba(0, 0, 0, 0.25);
+}
+
+/* Media queries */
+@media (max-width: 800px) {
+  .container {
+    gap: 60px; /* Increase the gap on mobile */
+  }
+
+  .resumeButton {
+    margin-top: 60px; /* Further increase margin for mobile */
+  }
+}
+
+@media (min-width: 800px) {
+  .container {
+    flex-direction: row-reverse;
+    align-items: center;
+    justify-content: space-evenly;
+  }
+
+  .hero {
+    max-width: 350px;
+    width: 350px;
+  }
+}
+
+@media (min-width: 1400px) {
+  .hero {
+    max-width: 400px;
+    width: 400px;
+  }
+}
