@@ -14,18 +14,22 @@ function Skills() {
       <h1 className="sectionTitle">Skills</h1>
       <div className={styles.skillList}>
         <SkillList src={checkMarkIcon} skill="Django" />
-        <SkillList src={checkMarkIcon} skill="React" />
+        <SkillList src={checkMarkIcon} skill="React.js" />
+        <SkillList src={checkMarkIcon} skill="Next.js" />
         <SkillList src={checkMarkIcon} skill="Python" />
         <SkillList src={checkMarkIcon} skill="Javascript" />
         <SkillList src={checkMarkIcon} skill="Java" />
+        <SkillList src={checkMarkIcon} skill="GoLang" />
       </div>
       <hr />
       <div className={styles.skillList}>
-        <SkillList src={checkMarkIcon} skill="Machine Learning" />
-        <SkillList src={checkMarkIcon} skill="Databases" />
+        <SkillList src={checkMarkIcon} skill="AI & ML" />
+        <SkillList src={checkMarkIcon} skill="PostgreSQL" />
+        <SkillList src={checkMarkIcon} skill="MongoDB" />
+        <SkillList src={checkMarkIcon} skill="Redis" />
         <SkillList src={checkMarkIcon} skill="Git" />
-        <SkillList src={checkMarkIcon} skill="API" />
-        <SkillList src={checkMarkIcon} skill="Automation" />
+        <SkillList src={checkMarkIcon} skill="REST API" />
+        <SkillList src={checkMarkIcon} skill="Docker" />
       </div>
     </section>
   );
