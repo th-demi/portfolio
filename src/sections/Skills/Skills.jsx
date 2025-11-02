@@ -18,18 +18,19 @@ function Skills() {
         <SkillList src={checkMarkIcon} skill="Next.js" />
         <SkillList src={checkMarkIcon} skill="Python" />
         <SkillList src={checkMarkIcon} skill="Javascript" />
-        <SkillList src={checkMarkIcon} skill="Java" />
+        <SkillList src={checkMarkIcon} skill="Linux" />
         <SkillList src={checkMarkIcon} skill="GoLang" />
       </div>
       <hr />
       <div className={styles.skillList}>
-        <SkillList src={checkMarkIcon} skill="AI & ML" />
+        <SkillList src={checkMarkIcon} skill="AWS" />
         <SkillList src={checkMarkIcon} skill="PostgreSQL" />
         <SkillList src={checkMarkIcon} skill="MongoDB" />
         <SkillList src={checkMarkIcon} skill="Redis" />
         <SkillList src={checkMarkIcon} skill="Git" />
         <SkillList src={checkMarkIcon} skill="REST API" />
         <SkillList src={checkMarkIcon} skill="Docker" />
+        <SkillList src={checkMarkIcon} skill="Nginx & LB" />
       </div>
     </section>
   );
