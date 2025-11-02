@@ -1,6 +1,5 @@
 import React from 'react';
 import styles from './ResumeModal.module.css';
-// import CV from '../assets/Demi_Resume.pdf';
 import { useTheme } from './ThemeContext';
 
 function ResumeModal({ isOpen, onClose }) {
@@ -8,13 +7,27 @@ function ResumeModal({ isOpen, onClose }) {
 
   if (!isOpen) return null;
 
+  // Close modal when clicking on the overlay
+  const handleOverlayClick = () => {
+    onClose();
+  };
+
+  // Prevent closing when clicking inside the modal
+  const handleModalClick = (e) => {
+    e.stopPropagation();
+  };
+
   return (
-    <div className={`${styles.overlay} ${theme === 'dark' ? styles.dark : styles.light}`}>
-      <div className={styles.modal}>
-        <button className={styles.closeButton} onClick={onClose}>
-          &times;
-        </button>
-        <iframe src={"/Demi_Resume.pdf"} title="Resume" className={styles.pdfViewer}></iframe>
+    <div
+      className={`${styles.overlay} ${theme === 'dark' ? styles.dark : styles.light}`}
+      onClick={handleOverlayClick}
+    >
+      <div className={styles.modal} onClick={handleModalClick}>
+        <iframe
+          src={"/Demi_Resume.pdf"}
+          title="Resume"
+          className={styles.pdfViewer}
+        ></iframe>
       </div>
     </div>
   );
