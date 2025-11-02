@@ -1,3 +1,4 @@
+import React, { useState } from 'react';
 import styles from './HeroStyles.module.css';
 import heroImg from '../../assets/Design uten navn.png';
 import sun from '../../assets/sun.svg';
@@ -8,36 +9,27 @@ import githubLight from '../../assets/github-light.svg';
 import githubDark from '../../assets/github-dark.svg';
 import linkedinLight from '../../assets/linkedin-light.svg';
 import linkedinDark from '../../assets/linkedin-dark.svg';
-import CV from '../../assets/Demi_Resume.pdf';
 import { useTheme } from '../../common/ThemeContext';
-import React from 'react';
+import ResumeModal from '../../common/ResumeModal';
 
 function Hero() {
   const { theme, toggleTheme } = useTheme();
+  const [isResumeOpen, setIsResumeOpen] = useState(false);
 
   const themeIcon = theme === 'light' ? sun : moon;
   const mailIcon = theme === 'light' ? mailLight : mailDark;
   const githubIcon = theme === 'light' ? githubLight : githubDark;
   const linkedinIcon = theme === 'light' ? linkedinLight : linkedinDark;
 
-  // Determine button class based on theme
   const buttonClass = `${styles.resumeButton} ${theme === 'light' ? styles.lightButton : styles.darkButton}`;
 
   return (
     <section id="hero" className={styles.container}>
       <div className={styles.colorModeContainer}>
-        <img
-          src={heroImg}
-          className={styles.hero}
-          alt="Profile picture of Demi"
-        />
-        <img
-          className={styles.colorMode}
-          src={themeIcon}
-          alt="Color mode icon"
-          onClick={toggleTheme}
-        />
+        <img src={heroImg} className={styles.hero} alt="Profile picture of Demi" />
+        <img className={styles.colorMode} src={themeIcon} alt="Color mode icon" onClick={toggleTheme} />
       </div>
+
       <div className={styles.info}>
         <h1>Demi</h1>
         <h2>Software / Python Developer</h2>
@@ -53,10 +45,14 @@ function Hero() {
           </a>
         </div>
         <p className={styles.description}>A dedicated software developer crafting digital solutions with a creative touch</p>
-        <a href={CV} download>
-          <button className={buttonClass}>Resume</button>
-        </a>
+
+        <button className={buttonClass} onClick={() => setIsResumeOpen(true)}>
+          Resume
+        </button>
       </div>
+
+      {/* Modal */}
+      <ResumeModal isOpen={isResumeOpen} onClose={() => setIsResumeOpen(false)} />
     </section>
   );
 }
