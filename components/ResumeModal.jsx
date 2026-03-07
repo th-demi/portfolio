@@ -26,7 +26,7 @@ function ResumeModal({ isOpen, onClose }) {
     >
       <div className={styles.modal} onClick={handleModalClick}>
         <iframe
-          src={"/Demi_Resume.pdf"}
+          src={"/demi-resume.pdf"}
           title="Resume"
           className={styles.pdfViewer}
         ></iframe>

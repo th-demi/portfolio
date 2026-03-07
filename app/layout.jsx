@@ -2,7 +2,7 @@ import './globals.css';
 import { ThemeProvider } from '../components/ThemeContext';
 
 export const metadata = {
-  title: 'Harris Johnsen - Portfolio',
+  title: 'Demi - Portfolio',
   description: 'Harris Johnsen portfolio website',
 };
 
