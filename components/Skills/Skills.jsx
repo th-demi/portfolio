@@ -1,13 +1,13 @@
+'use client';
+
 import styles from './SkillsStyles.module.css';
-import checkMarkIconDark from '../../assets/checkmark-dark.svg';
-import checkMarkIconLight from '../../assets/checkmark-light.svg';
-import SkillList from '../../common/SkillList';
-import { useTheme } from '../../common/ThemeContext';
+import SkillList from '../SkillList';
+import { useTheme } from '../ThemeContext';
 import React from 'react';
 
 function Skills() {
   const { theme } = useTheme();
-  const checkMarkIcon = theme === 'light' ? checkMarkIconLight : checkMarkIconDark;
+  const checkMarkIcon = theme === 'light' ? '/assets/checkmark-light.svg' : '/assets/checkmark-dark.svg';
 
   return (
     <section id="skills" className={styles.container}>
@@ -21,7 +21,7 @@ function Skills() {
         <SkillList src={checkMarkIcon} skill="Linux" />
         <SkillList src={checkMarkIcon} skill="GoLang" />
       </div>
-      <hr />
+      <hr className={styles.separator} />
       <div className={styles.skillList}>
         <SkillList src={checkMarkIcon} skill="AWS" />
         <SkillList src={checkMarkIcon} skill="PostgreSQL" />

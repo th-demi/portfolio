@@ -1,5 +1,6 @@
-node_modules
+node_modules/
 code_to_text.txt
 code_to_text.sh
 .DS_Store
 src/.DS_Store
+.next/

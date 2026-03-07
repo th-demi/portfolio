@@ -27,7 +27,7 @@
   width: 20px; /* You can adjust the image size */
 }
 
-hr {
+.separator {
   width: 100px;
   height: 1px;
   border: none;
@@ -40,7 +40,7 @@ hr {
     gap: 30px;
   }
 
-  hr {
+  .separator {
     width: 300px;
   }
 }
