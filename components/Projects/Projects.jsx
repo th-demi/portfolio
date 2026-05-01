@@ -1,6 +1,6 @@
-import styles from './ProjectsStyles.module.css';
-import ProjectCard from '../ProjectCard';
-import React from 'react';
+import styles from "./ProjectsStyles.module.css";
+import ProjectCard from "../ProjectCard";
+import React from "react";
 
 function Projects() {
   return (
@@ -8,10 +8,10 @@ function Projects() {
       <h1 className="sectionTitle">Projects</h1>
       <div className={styles.projectsContainer}>
         <ProjectCard
-          src="/assets/roomify.png"
-          link="https://demi-roomify.vercel.app/"
-          h3="Roomify"
-          p="Developed Roomify using Django and React, integrating Spotify API for collaborative music playback with host control and guest voting."
+          src="/assets/ragnarok.png"
+          link="https://demi-ragnarok.vercel.app/login"
+          h3="RAGnarok"
+          p="Built RAG platform using Next.js, FastAPI, Docker, PostgreSQL pgvector, Redis caching, pdfplumber pipeline, LLM responses with JWT security."
         />
         <ProjectCard
           src="/assets/GSIM_logo.png"
