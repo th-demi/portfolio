@@ -32,5 +32,5 @@
 .projectTitle,
 .projectDescription {
   margin: 10px 0; /* Space between title/description */
-  color: #222; /* Adjust color if necessary */
+  color: var(--text-color); /* Follow the active theme */
 }
