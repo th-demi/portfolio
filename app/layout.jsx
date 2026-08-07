@@ -1,5 +1,6 @@
 import './globals.css';
 import { ThemeProvider } from '../components/ThemeContext';
+import Cursor from '../components/Cursor/Cursor';
 
 export const metadata = {
   title: 'Demi - Portfolio',
@@ -19,6 +20,7 @@ export default function RootLayout({ children }) {
           <div id="root">
             {children}
           </div>
+          <Cursor />
         </ThemeProvider>
       </body>
     </html>
